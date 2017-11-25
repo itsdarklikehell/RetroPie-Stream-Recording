@@ -38,8 +38,6 @@ To do that ssh into your Raspberry Pi and use the following command to create th
 
 $ nano /home/pi/RetroPie/recording/twitch.cfg
 
- -10-16-12-02-37
-
 I based my config file off of what I found on the RetroArch wiki however when ever I had my audio codex set to ‘libmp3lame’ I would get a “bus error” at the following location: ‘/opt/retropie/supplementary/runcommand/runcommand.sh: line 855: 16499’
 
 Switching to ‘aac’ as the audio code solved the issue and got me streaming to Twitch, however there were lots of lag issues, so I spent a long time configuring the settings trying to get the games to play smoothly locally and stream at the same time.
