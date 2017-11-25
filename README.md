@@ -22,7 +22,7 @@ Once you have an account you will need your Twitch stream key. You can get this 
 
 https://www.twitch.tv/<>/dashboard/streamkey
 
-screenshot-from-2016-10-16-11-56-58
+ 
 
 From there hit the ‘Show Key’ button and grab your stream key.
 
@@ -38,7 +38,7 @@ To do that ssh into your Raspberry Pi and use the following command to create th
 
 $ nano /home/pi/RetroPie/recording/twitch.cfg
 
-screenshot-from-2016-10-16-12-02-37
+ -10-16-12-02-37
 
 I based my config file off of what I found on the RetroArch wiki however when ever I had my audio codex set to ‘libmp3lame’ I would get a “bus error” at the following location: ‘/opt/retropie/supplementary/runcommand/runcommand.sh: line 855: 16499’
 
@@ -93,8 +93,6 @@ And the RMTP Twitch URL that we will stream to:
 --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$
 
 Where $$STREAM_KEY$$ is the stream key that you got from your Twitch account earlier.
-
-screenshot-from-2016-10-16-12-13-12
 
 Then save (CTRL+O) and exit (CTRL+X).
 
