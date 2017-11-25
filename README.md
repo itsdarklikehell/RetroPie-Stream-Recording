@@ -9,8 +9,6 @@ The big problem is the performance of the games as you are playing them. The per
 Note: You can see my test stream here: https://www.twitch.tv/selsine
 
 Assumptions
-
-
  
 I’m going to assume that you can already ssh into your RetroPie and that you can already record gameplay videos. If not checkout my post: How To Record A GamePlay Video From A RetroPie or RetroResolutions: Recording Live Gameplay in RetroPie’s RetroArch Emulators Natively on the Raspberry Pi
 
@@ -22,12 +20,8 @@ Once you have an account you will need your Twitch stream key. You can get this 
 
 https://www.twitch.tv/<>/dashboard/streamkey
 
- 
-
 From there hit the ‘Show Key’ button and grab your stream key.
 
-
- 
 Note: Keep your stream key private. Anyone that has it can stream to your Twitch account, and you don’t want that happening.
 
 Twitch Config File
@@ -50,7 +44,6 @@ pix_fmt = yuv420p
 threads = 2
 scale_factor = 1
 format = flv
-
 video_preset = ultrafast
 video_profile = main
 video_tune = animation
@@ -60,10 +53,10 @@ video_maxrate = 512k
 video_r = 60
 video_g = 120
 video_keyint_min = 60
-
 sample_rate = 44100
 audio_preset = aac_he_v2
 audio_global_quality = 1
+
 There is only a bit of audio distortion but the stream gets an excellent rating on Twitch.
 
 Once you have pasted the above settings into your config file save (CTRL+O) and exit (CTRL+X).
