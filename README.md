@@ -92,3 +92,91 @@ Note: You may want to check out the list of Twitch servers and choose one that i
 Streaming Your Gameplay
 
 That’s it for the setup. Now you can go into the NES section on your RetroPie and start a game. While the game is loading hit the ‘A’ button to enter the configuration and select ‘Select emulator for rom’. There you will see the new ‘lr-fceumm-record-twitch’ entry that we added. Select it (it will now be the default so be sure to change it if you don’t want to stream next time you play.) and when you launch the game you should now be streaming to twitch.
+
+Category:Libretro Cores
+This is a list of Libretro cores.
+Pages in category "Libretro Cores"
+The following 63 pages are in this category, out of 63 total.
+2
+2048
+4
+4DO
+B
+Beetle/Mednafen LYNX
+Beetle/Mednafen NGP
+Beetle/Mednafen PCE FAST
+Beetle/Mednafen PCFX
+Beetle/Mednafen PSX
+Beetle/Mednafen SGX
+Beetle/Mednafen VB
+Beetle/Mednafen WSWAN
+BlueMSX
+Bnes
+Bsnes
+Bsnes-mercury
+C
+Cores
+D
+DeSmuME
+Dinothawr
+DOSBox
+Dungeon Crawl Stone Soup
+E
+Emux
+F
+FCEUmm
+Final Burn Alpha
+FMSX
+Fuse
+G
+Gambatte
+Game & Watch
+Genesis Plus GX
+GpSP
+H
+Handy
+Hatari
+M
+MAME
+MAME 2000
+MAME 2010
+MAME 2014
+MAME 2016
+MESS
+Meteor
+MGBA
+Mupen64Plus
+N
+Nestopia
+O
+O2EM
+P
+PCSX ReARMed
+PicoDrive
+PPSSPP
+PrBoom
+ProSystem
+Q
+QuickNES
+R
+Reicast
+S
+ScummVM
+Snes9x
+Snes9x 2002
+Snes9x 2005
+Snes9x 2010
+Stella
+T
+TempGBA
+TGB Dual
+TyrQuake
+U
+Uzem
+V
+VBA Next
+VBA-M
+Vecx
+Virtual Jaguar
+Y
+Yabause
