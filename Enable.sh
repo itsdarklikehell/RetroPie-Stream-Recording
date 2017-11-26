@@ -2,7 +2,7 @@
 
 ## CONFIG
 RECORD_CONFIG="/home/pi/RetroPie/recording/twitch.cfg"
-COFIGDIR="/opt/retropie/configs"
+CONFIGDIR="/opt/retropie/configs"
 STREAM_URL="streamurl"
 STREAM_KEY="streamkey"
 ## CONFIG END
