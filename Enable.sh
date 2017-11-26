@@ -3,7 +3,7 @@
 ## CONFIG
 RECORD_CONFIG="/home/pi/RetroPie/recording/twitch.cfg"
 CONFIGDIR="/opt/retropie/configs"
-STREAM_URL="streamurl"
+STREAM_URL="rtmp://live.twitch.tv/app"
 STREAM_KEY="streamkey"
 ## CONFIG END
 
@@ -40,7 +40,7 @@ echo "Now we need to add an entry into our emulator config file that will start 
 #echo "For this example we are going to edit the NES system’s config file"
 #Then we need to add an entry that will stream to Twitch. We will call it: ‘lr-fceumm-record-twitch’ and we will use the following command:
 
-#echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+#echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
 #nano $CONFIGDIR/nes/emulators.cfg
 
 MENU_SELECT(){
@@ -48,15 +48,13 @@ choice=$(whiptail --title "Check list example" --separate-output --checklist \
 "Choose what emulator you would like to enable stream recording for" 20 78 4 \
 "NES" "NES emulator." ON \
 "SNES" "SNES emulator." ON \
-"OTHER" "Please specify" OFF \
-"REMOTE_MOUNT" "Allow mounting of remote devices" OFF 3>&1 1>&2 2>&3)
+"OTHER" "Please specify" OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
     echo "The chosen options are:" $choice
     if [ $choice = NES ]; then
-    echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
-    
-
+    echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+   
     nano $CONFIGDIR/nes/emulators.cfg
     echo "NES stream recording enabled"
     fi
@@ -72,7 +70,7 @@ else
 fi
 }
 MENU_SELECT
-#lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"
+#lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig $RECORD_CONFIG %ROM%"
 
 #Where we specify the Twitch config file that we created earlier:
 
