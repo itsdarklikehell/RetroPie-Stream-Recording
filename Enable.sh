@@ -47,7 +47,7 @@ MENU_SELECT(){
 choice=$(whiptail --title "Check list example" --separate-output --checklist \
 "Choose what emulator you would like to enable stream recording for" 20 78 4 \
 "NES" "NES emulator." ON \
-"SNES" "SNES emulator." OFF \
+"SNES" "SNES emulator." ON \
 "OTHER" "Please specify" OFF \
 "REMOTE_MOUNT" "Allow mounting of remote devices" OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
