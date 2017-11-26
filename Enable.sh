@@ -2,6 +2,7 @@
 
 ## CONFIG
 RECORD_CONFIG="/home/pi/RetroPie/recording/twitch.cfg"
+COFIGDIR="/opt/retropie/configs/"
 STREAM_URL="streamurl"
 STREAM_KEY="streamkey"
 ## CONFIG END
@@ -38,11 +39,11 @@ echo "Now we need to add an entry into our emulator config file that will start 
 
 echo "For this example we are going to edit the NES system’s config file"
 
-nano /opt/retropie/configs/nes/emulators.cfg
+nano $CONFIGDIR/nes/emulators.cfg
 
 Then we need to add an entry that will stream to Twitch. We will call it: ‘lr-fceumm-record-twitch’ and we will use the following command:
-echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"
-' >> /opt/retropie/configs/nes/emulators.cfg
+echo "lr-fceumm-record-twitch = '/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%'
+" >> /opt/retropie/configs/nes/emulators.cfg
 
 #lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"
 
