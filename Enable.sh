@@ -55,6 +55,7 @@ if [ $exitstatus = 0 ]; then
     echo "The chosen options are:" $choice
     if [ $choice = NES ]; then
     echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig /home/pi/RetroPie/recording/twitch.cfg %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+    
 
     nano $CONFIGDIR/nes/emulators.cfg
     echo "NES stream recording enabled"
