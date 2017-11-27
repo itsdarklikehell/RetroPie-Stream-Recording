@@ -7,7 +7,8 @@ STREAM_URL="rtmp://live.twitch.tv/app"
 STREAM_KEY="streamkey"
 ## CONFIG END
 
-CREATE_CONFIG(){
+
+
 echo "Enableing Stream Recording."
 echo "vcodec = libx264" > $RECORD_CONFIG
 echo "acodec = libfdk_aac" >> $RECORD_CONFIG
@@ -29,8 +30,7 @@ echo "audio_preset = aac_he_v2" >> $RECORD_CONFIG
 echo "audio_global_quality = 1" >> $RECORD_CONFIG
 nano $RECORD_CONFIG
 echo "done creating recording config in $RECORD_CONFIG"
-}
-CREATE_CONFIG
+
 echo "Emulator Configuration"
 
 echo "Now we need to add an entry into our emulator config file that will start a twitch stream rather than a regular recording or normal emulation."
@@ -46,15 +46,20 @@ echo "Now we need to add an entry into our emulator config file that will start 
 MENU_SELECT(){
 choice=$(whiptail --title "Check list example" --separate-output --checklist \
 "Choose what emulator you would like to enable stream recording for" 20 78 4 \
+"2048" "2048 emulator." ON \
 "NES" "NES emulator." ON \
 "SNES" "SNES emulator." ON \
 "OTHER" "Please specify" OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
     echo "The chosen options are:" $choice
+    if [ $choice = 2048 ]; then
+    #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+    #nano $CONFIGDIR/nes/emulators.cfg
+    echo "2048 stream recording enabled"
+    fi
     if [ $choice = NES ]; then
     echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
-   
     nano $CONFIGDIR/nes/emulators.cfg
     echo "NES stream recording enabled"
     fi

@@ -95,8 +95,6 @@ That’s it for the setup. Now you can go into the NES section on your RetroPie 
 
 This is a list of Libretro cores.
 
-2
-2048
 4
 4DO
 B
