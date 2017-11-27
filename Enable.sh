@@ -7,8 +7,7 @@ STREAM_URL="rtmp://live.twitch.tv/app"
 STREAM_KEY="streamkey"
 ## CONFIG END
 
-
-
+CREATE_CONFIG(){
 echo "Enableing Stream Recording."
 echo "vcodec = libx264" > $RECORD_CONFIG
 echo "acodec = libfdk_aac" >> $RECORD_CONFIG
@@ -30,7 +29,8 @@ echo "audio_preset = aac_he_v2" >> $RECORD_CONFIG
 echo "audio_global_quality = 1" >> $RECORD_CONFIG
 nano $RECORD_CONFIG
 echo "done creating recording config in $RECORD_CONFIG"
-
+}
+CREATE_CONFIG
 echo "Emulator Configuration"
 
 echo "Now we need to add an entry into our emulator config file that will start a twitch stream rather than a regular recording or normal emulation."
