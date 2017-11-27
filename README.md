@@ -8,11 +8,11 @@ The big problem is the performance of the games as you are playing them. The per
 
 Note: You can see my test stream here: https://www.twitch.tv/selsine
 
-Assumptions
- 
+# Assumptions
+
 I’m going to assume that you can already ssh into your RetroPie and that you can already record gameplay videos. If not checkout my post: How To Record A GamePlay Video From A RetroPie or RetroResolutions: Recording Live Gameplay in RetroPie’s RetroArch Emulators Natively on the Raspberry Pi
 
-Getting A Twitch Account and Stream Key
+# Getting A Twitch Account and Stream Key
 
 If you want to stream to Twitch you will need a Twitch account (of course) to do so visit: https://www.twitch.tv/signup and signup.
 
@@ -24,7 +24,7 @@ From there hit the ‘Show Key’ button and grab your stream key.
 
 Note: Keep your stream key private. Anyone that has it can stream to your Twitch account, and you don’t want that happening.
 
-Twitch Config File
+# Twitch Config File
 
 Now that we have our twitch account setup we will need to create a Twitch config file for FFmpeg so that the recordings it does are compatible with the Twitch servers.
 
@@ -61,7 +61,7 @@ There is only a bit of audio distortion but the stream gets an excellent rating 
 
 Once you have pasted the above settings into your config file save (CTRL+O) and exit (CTRL+X).
 
-Emulator Configuration
+# Emulator Configuration
 
 Now we need to add an entry into our emulator config file that will start a twitch stream rather than a regular recording or normal emulation.
 
@@ -89,14 +89,12 @@ Then save (CTRL+O) and exit (CTRL+X).
 
 Note: You may want to check out the list of Twitch servers and choose one that is the closest to you.
 
-Streaming Your Gameplay
+# Streaming Your Gameplay
 
 That’s it for the setup. Now you can go into the NES section on your RetroPie and start a game. While the game is loading hit the ‘A’ button to enter the configuration and select ‘Select emulator for rom’. There you will see the new ‘lr-fceumm-record-twitch’ entry that we added. Select it (it will now be the default so be sure to change it if you don’t want to stream next time you play.) and when you launch the game you should now be streaming to twitch.
 
-Category:Libretro Cores
 This is a list of Libretro cores.
-Pages in category "Libretro Cores"
-The following 63 pages are in this category, out of 63 total.
+
 2
 2048
 4
