@@ -70,11 +70,100 @@ if [ $exitstatus = 0 ]; then
     if [ $choice = OTHER ]; then
     echo "Please specify which retroarch core to enable stream recording for:"
     fi
+ALLDONE
 else
     echo "You chose Cancel."
+ALLDONE
 fi
 }
 MENU_SELECT
+ALLDONE(){
+echo "done"
+}
+#list of retroarch cores:
+4
+4DO
+B
+Beetle/Mednafen LYNX
+Beetle/Mednafen NGP
+Beetle/Mednafen PCE FAST
+Beetle/Mednafen PCFX
+Beetle/Mednafen PSX
+Beetle/Mednafen SGX
+Beetle/Mednafen VB
+Beetle/Mednafen WSWAN
+BlueMSX
+Bnes
+Bsnes
+Bsnes-mercury
+C
+Cores
+D
+DeSmuME
+Dinothawr
+DOSBox
+Dungeon Crawl Stone Soup
+E
+Emux
+F
+FCEUmm
+Final Burn Alpha
+FMSX
+Fuse
+G
+Gambatte
+Game & Watch
+Genesis Plus GX
+GpSP
+H
+Handy
+Hatari
+M
+MAME
+MAME 2000
+MAME 2010
+MAME 2014
+MAME 2016
+MESS
+Meteor
+MGBA
+Mupen64Plus
+N
+Nestopia
+O
+O2EM
+P
+PCSX ReARMed
+PicoDrive
+PPSSPP
+PrBoom
+ProSystem
+Q
+QuickNES
+R
+Reicast
+S
+ScummVM
+Snes9x
+Snes9x 2002
+Snes9x 2005
+Snes9x 2010
+Stella
+T
+TempGBA
+TGB Dual
+TyrQuake
+U
+Uzem
+V
+VBA Next
+VBA-M
+Vecx
+Virtual Jaguar
+Y
+Yabause
+
+#Explanation:
 #lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig $RECORD_CONFIG %ROM%"
 
 #Where we specify the Twitch config file that we created earlier:
