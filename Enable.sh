@@ -56,7 +56,7 @@ choice=$(whiptail --title "Check list example" --separate-output --checklist \
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
     echo "The chosen options are:" $choice
-    if [[ $choice = TWOTHOUSANDFOURTYEIGHT ]]; then
+    if [ $choice = TWOTHOUSANDFOURTYEIGHT ]; then
     #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
     nano $CONFIGDIR/2048/emulators.cfg
     echo "2048 stream recording enabled"
