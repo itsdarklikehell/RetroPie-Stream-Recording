@@ -61,23 +61,24 @@ if [ $exitstatus = 0 ]; then
     nano $CONFIGDIR/2048/emulators.cfg
     echo "2048 stream recording enabled"
     fi
-    #if [ $choice = 4DO ]; then
+    if [ $choice = 4DO ]; then
     #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
     #nano $CONFIGDIR/nes/emulators.cfg
-    #echo "4DO stream recording enabled"
-    #fi
-    #if [ $choice = NES ]; then
+    echo "4DO stream recording enabled"
+    fi
+    if [ $choice = NES ]; then
     #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
-    #nano $CONFIGDIR/nes/emulators.cfg
-    #echo "NES stream recording enabled"
-    #fi
-    #if [ $choice = SNES ]; then
-    #nano $CONFIGDIR/snes/emulators.cfg
-    #echo "SNES stream recording enabled"
-    #fi
-    #if [ $choice = OTHER ]; then
-    #echo "Please specify which retroarch core to enable stream recording for:"
-    #fi
+    nano $CONFIGDIR/nes/emulators.cfg
+    echo "NES stream recording enabled"
+    fi
+    if [ $choice = SNES ]; then
+    #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+    nano $CONFIGDIR/snes/emulators.cfg
+    echo "SNES stream recording enabled"
+    fi
+    if [ $choice = OTHER ]; then
+    echo "Please specify which retroarch core to enable stream recording for:"
+    fi
 ALLDONE
 else
     echo "You chose Cancel."
