@@ -42,21 +42,29 @@ echo "Now we need to add an entry into our emulator config file that will start 
 
 #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
 #nano $CONFIGDIR/nes/emulators.cfg
-
+ALLDONE(){
+echo "done"
+}
 MENU_SELECT(){
 choice=$(whiptail --title "Check list example" --separate-output --checklist \
 "Choose what emulator you would like to enable stream recording for" 20 78 4 \
-"2048" "2048 emulator." ON \
+"TWOTHOUSANDFOURTYEIGHT" "2048 emulator." ON \
+"4DO" "4do emulator." ON \
 "NES" "NES emulator." ON \
 "SNES" "SNES emulator." ON \
 "OTHER" "Please specify" OFF 3>&1 1>&2 2>&3)
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
     echo "The chosen options are:" $choice
-    if [ $choice = 2048 ]; then
+    if [ $choice = TWOTHOUSANDFOURTYEIGHT ]; then
     #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
     #nano $CONFIGDIR/nes/emulators.cfg
     echo "2048 stream recording enabled"
+    fi
+    if [ $choice = 4DO ]; then
+    #echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
+    #nano $CONFIGDIR/nes/emulators.cfg
+    echo "4DO stream recording enabled"
     fi
     if [ $choice = NES ]; then
     echo 'lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config $CONFIGDIR/nes/retroarch.cfg --record $STREAM_URL/$STREAM_KEY --recordconfig $RECORD_CONFIG %ROM%"' >> $CONFIGDIR/nes/emulators.cfg
@@ -76,92 +84,96 @@ else
 ALLDONE
 fi
 }
+
 MENU_SELECT
-ALLDONE(){
-echo "done"
-}
+
+
+
+
+
+
 #list of retroarch cores:
-4
-4DO
-B
-Beetle/Mednafen LYNX
-Beetle/Mednafen NGP
-Beetle/Mednafen PCE FAST
-Beetle/Mednafen PCFX
-Beetle/Mednafen PSX
-Beetle/Mednafen SGX
-Beetle/Mednafen VB
-Beetle/Mednafen WSWAN
-BlueMSX
-Bnes
-Bsnes
-Bsnes-mercury
-C
-Cores
-D
-DeSmuME
-Dinothawr
-DOSBox
-Dungeon Crawl Stone Soup
-E
-Emux
-F
-FCEUmm
-Final Burn Alpha
-FMSX
-Fuse
-G
-Gambatte
-Game & Watch
-Genesis Plus GX
-GpSP
-H
-Handy
-Hatari
-M
-MAME
-MAME 2000
-MAME 2010
-MAME 2014
-MAME 2016
-MESS
-Meteor
-MGBA
-Mupen64Plus
-N
-Nestopia
-O
-O2EM
-P
-PCSX ReARMed
-PicoDrive
-PPSSPP
-PrBoom
-ProSystem
-Q
-QuickNES
-R
-Reicast
-S
-ScummVM
-Snes9x
-Snes9x 2002
-Snes9x 2005
-Snes9x 2010
-Stella
-T
-TempGBA
-TGB Dual
-TyrQuake
-U
-Uzem
-V
-VBA Next
-VBA-M
-Vecx
-Virtual Jaguar
-Y
-Yabause
+#4
+#4DO
+#B
+#Beetle/Mednafen LYNX
+#Beetle/Mednafen NGP
+#Beetle/Mednafen PCE FAST
+#Beetle/Mednafen PCFX
+#Beetle/Mednafen PSX
+#Beetle/Mednafen SGX
+#Beetle/Mednafen VB
+#Beetle/Mednafen WSWAN
+#BlueMSX
+#Bnes
+#Bsnes
+#Bsnes-mercury
+#C
+#Cores
+#D
+#DeSmuME
+#Dinothawr
+#DOSBox
+#Dungeon Crawl Stone Soup
+#E
+#Emux
+#F
+#FCEUmm
+#Final Burn Alpha
+#FMSX
+#Fuse
+#G
+#Gambatte
+#Game & Watch
+#Genesis Plus GX
+#GpSP
+#H
+#Handy
+#Hatari
+#M
+#MAME
+#MAME 2000
+#MAME 2010
+#MAME 2014
+#MAME 2016
+#MESS
+#Meteor
+#MGBA
+#Mupen64Plus
+#N
+#Nestopia
+#O
+#O2EM
+#P
+#PCSX ReARMed
+#PicoDrive
+#PPSSPP
+#PrBoom
+#ProSystem
+#Q
+#QuickNES
+#R
+#Reicast
+#S
+#ScummVM
+#Snes9x
+#Snes9x 2002
+#Snes9x 2005
+#Snes9x 2010
+#Stella
+#T
+#TempGBA
+#TGB Dual
+#TyrQuake
+#U
+#Uzem
+#V
+#VBA Next
+#VBA-M
+#Vecx
+#Virtual Jaguar
+#Y
+#Yabause
 
 #Explanation:
 #lr-fceumm-record-twitch = "/opt/retropie/emulators/retroarch/bin/retroarch -L /opt/retropie/libretrocores/lr-fceumm/fceumm_libretro.so --config /opt/retropie/configs/nes/retroarch.cfg --record rtmp://live.twitch.tv/app/$$STREAM_KEY$$ --recordconfig $RECORD_CONFIG %ROM%"
