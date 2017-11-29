@@ -46,7 +46,7 @@ ALLDONE(){
 echo "done"
 }
 MENU_SELECT(){
-choice=$(whiptail --title "Check list example" --separate-output --checklist \
+choice=$(whiptail --title "Check list example" --checklist \
 "Choose what emulator you would like to enable stream recording for" 20 78 4 \
 "TWOTHOUSANDFOURTYEIGHT" "2048 emulator." ON \
 "4DO" "4do emulator." ON \
