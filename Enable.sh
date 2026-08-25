@@ -4,7 +4,9 @@
 RECORD_CONFIG="/home/pi/RetroPie/recording/twitch.cfg"
 CONFIGDIR="/opt/retropie/configs"
 STREAM_URL="rtmp://live.twitch.tv/app"
+export STREAM_URL
 STREAM_KEY="streamkey"
+export STREAM_KEY
 ## CONFIG END
 
 
