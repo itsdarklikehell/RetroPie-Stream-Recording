@@ -176,3 +176,11 @@ Vecx
 Virtual Jaguar
 Y
 Yabause
+
+---
+
+## 🎥 Gource Visualization
+
+De ontwikkelhistorie van dit project in een film:
+
+<video src="https://raw.githubusercontent.com/itsdarklikehell/RetroPie-Stream-Recording/master/gource.mp4" controls width="100%"></video>
