@@ -1,5 +1,13 @@
 # RetroPie-Stream-Recording
 
+
+## Development Visualization
+
+<video src="https://raw.githubusercontent.com/itsdarklikehell/RetroPie-Stream-Recording/master/gource.mp4" controls width="100%"></video>
+
+*Gource visualization showing the repository's commit history. See the [Gource workflow](.github/workflows/gource.yml) for details.*
+
+
 <img src="https://img.shields.io/github/stars/itsdarklikehell/RetroPie-Stream-Recording?style=flat-square&color=blue" alt="Stars">
 <img src="https://img.shields.io/github/forks/itsdarklikehell/RetroPie-Stream-Recording?style=flat-square&color=green" alt="Forks">
 <img src="https://img.shields.io/github/license/itsdarklikehell/RetroPie-Stream-Recording?style=flat-square" alt="License">
