@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## CONFIG
+set -euo pipefail
 RECORD_CONFIG="/home/pi/RetroPie/recording/twitch.cfg"
 CONFIGDIR="/opt/retropie/configs"
 STREAM_URL="rtmp://live.twitch.tv/app"
